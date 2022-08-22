@@ -44,6 +44,6 @@ Should you have any questions or concerns, please do get in touch.
 
 ![image](https://user-images.githubusercontent.com/79454375/185997327-d0bb6189-027e-43c5-b3d3-2bea79f8bfca.png)
 
-![image](https://user-images.githubusercontent.com/79454375/186005575-605160df-6dc5-4b37-b07c-375a462f0017.png)
+![image](https://user-images.githubusercontent.com/79454375/186009877-51c558e9-e4d2-4626-99bd-a7c85866d26d.png)
 
 
