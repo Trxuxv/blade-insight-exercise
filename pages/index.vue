@@ -1,14 +1,17 @@
 <template>
-  <div class="w-full h-screen bg-gradient-to-r from-purple-500 to-pink-500">
-    <Nav />
-
+  <div class="w-full h-screen">
+    <Countries />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Countries from './countries/index.vue'
 
 export default Vue.extend({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: {
+    Countries
+  }
 })
 </script>

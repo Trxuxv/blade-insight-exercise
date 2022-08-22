@@ -1,18 +1,15 @@
-<!-- Please remove this file from your project -->
 <template>
   <div class="w-full flex items-center justify-center text-center text-sm h-16">
     <div class="w-4/5 h-full flex justify-center items-center">
       <div class="w-1/6 h-full flex justify-center items-center">
-        Logo
-      </div>
-      <div class="w-5/6 h-full flex justify-center items-center">
-        search
+        <img class="w-10" src="http://cdn.onlinewebfonts.com/svg/img_260445.png" alt="">
       </div>
     </div>
     <div class="w-3/6 h-full flex justify-center items-center">
-      <div class="w-1/6">Home</div>
-      <div class="w-1/6">List</div>
-      <div class="w-1/6">About</div>
+      <nuxt-link class="w-1/6 cursor-pointer" to="/">Home</nuxt-link>
+      <nuxt-link class="w-1/6 cursor-pointer" to="/list">List</nuxt-link>
+      <nuxt-link class="w-1/6 cursor-pointer" to="/list">About</nuxt-link>
+      <div class="w-1/6 cursor-pointer">Débora L. F. Maciel</div>
     </div>
   </div>
 </template>

@@ -6,33 +6,39 @@
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400 w-full">
             <tr>
-              <th scope="col" class="py-3 px-6 font-bold">
+              <th scope="col" class="py-3 px-6 font-bold  text-center">
                 Flag
               </th>
-              <th scope="col" class="py-3 px-6 font-bold">
+              <th scope="col" class="py-3 px-6 font-bold text-center">
                 Name
               </th>
-              <th scope="col" class="py-3 px-6 font-bold">
-                Capital
-              </th>
-              <th scope="col" class="py-3 px-6 font-bold">
+              <th scope="col" class="py-3 px-6 font-bold  text-center">
                 Region
               </th>
-              <th scope="col" class="py-3 px-6 font-bold">
+              <th scope="col" class="py-3 px-6 font-bold  text-center">
+                Subregion
+              </th>
+              <th scope="col" class="py-3 px-6 font-bold  text-center">
+                Capital
+              </th>
+              <th scope="col" class="py-3 px-6 font-bold  text-center">
                 Population
               </th>
             </tr>
           </thead>
           <tbody v-for="item in countries">
-            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 text-center">
               <th scope="row" class="py-4 px-4 bg-gray-50 text-center rounded-lg">
                 <img :src="item.flag" class="w-12 mx-auto rounded-sm" alt="">
               </th>
-              <td class="py-4 px-6">
+              <td class="py-4 px-6 text-center">
                 {{ item.name }}
               </td>
               <td class="py-4 px-6">
                 {{ item.region }}
+              </td>
+              <td class="py-4 px-6">
+                {{ item.subregion }}
               </td>
               <td class="py-4 px-6">
                 {{ item.capital }}
@@ -88,6 +94,6 @@ export default Vue.extend({
 }
 
 .tab {
-  height: 100%;
+  height: 120%;
 }
 </style>

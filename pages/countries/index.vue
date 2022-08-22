@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-screen bg-gradient-to-b from-gray-200 to-yellow-300">
     <Nav />
-    <div class="grid grid-cols-5">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg m-5" v-for="item in countries">
+    <div class="grid grid-cols-5 h-5/6 overflow-y-scroll p-2 m-4 rounded-lg tab">
+      <div class="max-w-sm rounded shadow-lg m-5" v-for="item in countries">
         <img class="w-full h-2/5" :src="item.flag" alt="Sunset in the mountains">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">{{ item.name }}</div>
@@ -62,5 +62,10 @@ export default Vue.extend({
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f88c56;
+}
+
+.tab{
+  background-color: rgba(255, 255, 255, 0.823);
+  height: 90%;
 }
 </style>
