@@ -10,17 +10,17 @@ There are, however, some rules as described below.
 
 # General Requirements
 
-* User __has to__ list all countries from the API on the homepage.
-* User __has to__ search for a country using an `input` field.
-* User __can__ filter countries by region.
-* User __has to__ click on a country to see more detailed information on a separate page.
+* User __has to__ list all countries from the API on the homepage. (OK)
+* User __has to__ search for a country using an `input` field. ()
+* User __can__ filter countries by region. 
+* User __has to__ click on a country to see more detailed information on a separate page. 
 * User __can__ view and click through to the border countries on the detail page.
 * You __can__ put comments where you describe why you do certain things or just explaining some more high level
  decision.
-* You __can__ use a CSS Framework (Bootstrap, Bulma, Tailwind, etc.…).
+* You __can__ use a CSS Framework (Bootstrap, Bulma, Tailwind, etc.…). (OK)
 * You __have to__ use a JavaScript framework/library on the front-end such as [Vue](https://vuejs.org) (recommended
-) or [React](https://reactjs.org).
-* You __can__ use packages, to do things like make HTTP requests or style your project.
+) or [React](https://reactjs.org). (OK)
+* You __can__ use packages, to do things like make HTTP requests or style your project. (OK)
 
 __All rules above are very important!__
   * Have/has to,  may not - this is mandatory.
