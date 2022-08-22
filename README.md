@@ -40,3 +40,7 @@ __All rules above are very important!__
 
 Should you have any questions or concerns, please do get in touch.
 # blade-insight-exercise
+
+
+![image](https://user-images.githubusercontent.com/79454375/185997327-d0bb6189-027e-43c5-b3d3-2bea79f8bfca.png)
+
