@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <div class="w-full h-screen bg-gradient-to-r from-purple-500 to-pink-500">
+    <Nav />
+
+  </div>
 </template>
 
 <script lang="ts">
