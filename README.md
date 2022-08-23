@@ -42,8 +42,11 @@ Should you have any questions or concerns, please do get in touch.
 # blade-insight-exercise
 
 
-![image](https://user-images.githubusercontent.com/79454375/185997327-d0bb6189-027e-43c5-b3d3-2bea79f8bfca.png)
+![image](https://user-images.githubusercontent.com/79454375/186212050-df7c64aa-e7b3-40ca-852c-0cf2de4d1014.png)
 
-![image](https://user-images.githubusercontent.com/79454375/186009877-51c558e9-e4d2-4626-99bd-a7c85866d26d.png)
+![image](https://user-images.githubusercontent.com/79454375/186212128-3e43ebb4-aa9f-455f-bcd9-3ab7fa2df074.png)
+
+![image](https://user-images.githubusercontent.com/79454375/186212172-7eac0cc4-9ebb-4872-a163-8ff338140a4b.png)
+
 
 
