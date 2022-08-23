@@ -8,7 +8,7 @@
     <div class="w-3/6 h-full flex justify-center items-center">
       <nuxt-link class="w-1/6 cursor-pointer" to="/">Home</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/list">List</nuxt-link>
-      <nuxt-link class="w-1/6 cursor-pointer" to="/list">About</nuxt-link>
+      <nuxt-link class="w-1/6 cursor-pointer" to="/about">About</nuxt-link>
       <div class="w-1/6 cursor-pointer">Débora L. F. Maciel</div>
     </div>
   </div>

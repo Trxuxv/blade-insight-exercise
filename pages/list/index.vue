@@ -5,7 +5,7 @@
       class="overflow-hidden h-5/6 shadow-md sm:rounded-lg w-4/6 text-center m-auto mt-10"
     >
       <div class="p-2 bg-gray-100 overflow-y-scroll tab pt-4">
-        <thread class="w-full ">
+        <thread class="w-full">
           <tr class="w-full">
             <th>
               <select
@@ -14,9 +14,7 @@
                 class="bg-gray-50 text-left py-2.5 border pr-6 border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected=""><span> Choose a region </span></option>
-                <option class="h-16 text-lg leading-8 text-white" value="africa">
-                  Africa <span class="text-red-500"> a</span>
-                </option>
+                <option value="africa">Africa</option>
                 <option value="antarctic Ocean">Antarctic Ocean</option>
                 <option value="antarctic">Antarctic</option>
                 <option value="americas">America</option>
@@ -26,7 +24,7 @@
               </select>
             </th>
             <th>
-            <div class="w-10 h-full"></div>
+              <div class="w-10 h-full"></div>
             </th>
             <th>
               <form class="flex items-center">
@@ -137,7 +135,6 @@ export default Vue.extend({
       region: "Choose a region",
       loading: true,
       search: "",
-      regions: [],
       countries: [],
     };
   },
@@ -150,15 +147,8 @@ export default Vue.extend({
       });
   },
 
-  methods: {
-    onChange(event) {
-      alert(event.target.value);
-    },
-  },
-
   computed: {
     filteredCountries() {
-
       if (this.region === "Choose a region" && this.search != "") {
         return this.countries.filter((x: any) => {
           return x.name.toLowerCase().includes(this.search.toLowerCase());
@@ -182,7 +172,6 @@ export default Vue.extend({
           );
         });
       }
-
     },
   },
   components: { Nav },
