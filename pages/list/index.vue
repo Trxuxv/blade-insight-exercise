@@ -1,21 +1,21 @@
 <template>
-  <div class="h-screen w-full bg-gradient-to-b from-gray-200 to-yellow-300">
+  <div class="h-screen w-full bg-gradient-to-b from-gray-200 to-gray-600">
     <Nav />
     <div
       class="overflow-hidden h-5/6 shadow-md sm:rounded-lg w-4/6 text-center m-auto mt-10"
     >
-      <div class="p-2 bg-gray-100 overflow-y-scroll tab">
-        <thread class="w-full">
+      <div class="p-2 bg-gray-100 overflow-y-scroll tab pt-4">
+        <thread class="w-full ">
           <tr class="w-full">
             <th>
               <select
                 v-model="region"
                 id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 text-left py-2.5 border pr-6 border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected=""><span> Choose a region </span></option>
-                <option class="h-16 text-gray-600 leading-8" value="africa">
-                  Africa
+                <option class="h-16 text-lg leading-8 text-white" value="africa">
+                  Africa <span class="text-red-500"> a</span>
                 </option>
                 <option value="antarctic Ocean">Antarctic Ocean</option>
                 <option value="antarctic">Antarctic</option>
@@ -191,7 +191,7 @@ export default Vue.extend({
 
 <style>
 ::-webkit-scrollbar {
-  width: 17px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -199,12 +199,12 @@ export default Vue.extend({
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c68f06;
+  background: red;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f88c56;
+  background: red;
 }
 
 .tab {
