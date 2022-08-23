@@ -9,9 +9,10 @@
       <nuxt-link class="w-1/6 cursor-pointer" to="/">Home</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/list">List</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/about">About</nuxt-link>
-      <nuxt-link class="w-1/6 cursor-pointer" to="/dev">
+      <a href="https://debora.netlify.app/" class="w-1/6 cursor-pointer" target="_blank">Débora L. F. Maciel</a>
+      <!-- <nuxt-link class="w-1/6 cursor-pointer" to="/dev">
         Débora L. F. Maciel
-      </nuxt-link>
+      </nuxt-link> -->
     </div>
   </div>
 </template>
