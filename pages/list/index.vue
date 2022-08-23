@@ -6,7 +6,7 @@
     >
       <div class="p-2 bg-gray-100 overflow-y-scroll tab">
         <thread class="w-full">
-          <tr class="w-full float-left">
+          <tr class="w-full">
             <th>
               <select
                 v-model="region"
@@ -24,6 +24,9 @@
                 <option value="europe">Europe</option>
                 <option value="oceania">Oceania</option>
               </select>
+            </th>
+            <th>
+            <div class="w-10 h-full"></div>
             </th>
             <th>
               <form class="flex items-center">
@@ -58,7 +61,7 @@
               </form>
             </th></tr
         ></thread>
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-6">
           <thead
             class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400 w-full"
           >
@@ -73,7 +76,7 @@
           </thead>
           <tbody v-for="item in filteredCountries">
             <tr
-              v-if="!loading"
+              v-show="!loading"
               class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 text-center"
             >
               <th scope="row" class="py-4 px-4 bg-gray-50 text-center rounded-lg">
@@ -97,7 +100,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="w-full h-4/6 flex justify-center items-center" v-if="loading">
+        <div class="w-full h-4/6 flex justify-center items-center" v-show="loading">
           <svg
             role="status"
             class="inline mr-2 w-12 h-12 text-gray-200 animate-spin dark:text-gray-600"

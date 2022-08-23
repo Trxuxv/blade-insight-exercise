@@ -72,7 +72,7 @@
       </form>
     </div>
     <div
-      v-if="loading"
+      v-show="loading"
       class="h-5/6 overflow-y-scroll p-2 m-4 rounded-lg tab-countries flex flex-col justify-center items-center"
     >
       <svg
@@ -97,7 +97,7 @@
       </span>
     </div>
     <div
-      v-if="!loading"
+      v-show="!loading"
       class="grid grid-cols-5 h-5/6 overflow-y-scroll p-2 m-4 rounded-lg tab-countries"
     >
       <div class="max-w-sm rounded shadow-lg m-5" v-for="item in filteredItems">
