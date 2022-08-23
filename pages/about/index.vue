@@ -44,7 +44,7 @@
                         </div>
                         <div class="mb-1">
                             + User __has to__ click on a country to see more detailed information on a separate
-                            page.<b class="text-red-600 text-right float-right">(OK)</b><br />
+                            page.<b class="text-green-600 text-right float-right">(OK)</b><br />
                         </div>
                         <div class="mb-1">
                             + User __can__ view and click through to the border countries on the detail page. <b
