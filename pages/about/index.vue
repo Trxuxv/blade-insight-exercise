@@ -48,7 +48,7 @@
                         </div>
                         <div class="mb-1">
                             + User __can__ view and click through to the border countries on the detail page. <b
-                                class="text-red-600 text-right float-right">(OK)</b><br />
+                                class="text-green-600 text-right float-right">(OK)</b><br />
                         </div>
                         <div class="mb-1">
                             + You __can__ put comments where you describe why you do certain things or just explaining
@@ -56,7 +56,7 @@
                             more
                             high level
                             decision.
-                            <b class="text-red-600 text-right float-right">(OK)</b>
+                            <b class="text-red-600 text-right float-right"></b>
                         </div>
                         <div class="mb-1">
                             + You __can__ use a CSS Framework (Bootstrap, Bulma, Tailwind, etc.…). <b
