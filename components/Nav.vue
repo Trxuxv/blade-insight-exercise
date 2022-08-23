@@ -9,7 +9,9 @@
       <nuxt-link class="w-1/6 cursor-pointer" to="/">Home</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/list">List</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/about">About</nuxt-link>
-      <div class="w-1/6 cursor-pointer">Débora L. F. Maciel</div>
+      <nuxt-link class="w-1/6 cursor-pointer" to="/dev">
+        Débora L. F. Maciel
+      </nuxt-link>
     </div>
   </div>
 </template>
