@@ -1,5 +1,7 @@
 # BladeInsight - Exercise
 
+<b>Link: </b> https://bladeinsight-exercise.netlify.app/
+
 ![image](https://user-images.githubusercontent.com/79454375/186249890-fb3cc159-ebac-4191-b12f-9d69d6ae27c1.png)
 
 ![image](https://user-images.githubusercontent.com/79454375/186249483-dc6375ab-24e0-4016-a33b-b571ebde770c.png)
