@@ -103,33 +103,40 @@ export default Vue.extend({
     fetch("https://restcountries.com/v2/all")
       .then((response) => response.json())
       .then((data) => {
+        if (typeof window !== 'undefined') {
+          localStorage.setItem("countries", JSON.stringify(data))
+        }
         (this.countries = data), (this.loading = false);
       });
   },
   computed: {
     filteredCountries() {
-      if (this.region === "Choose a region" && this.search != "") {
-        return this.countries.filter((x: CountryModel) => {
-          return x.name.toLowerCase().includes(this.search.toLowerCase());
-        });
-      }
+      if (typeof window !== 'undefined') {
+        let countries = JSON.parse(localStorage.getItem('countries')!);
 
-      if (this.region != "Choose a region" || this.search != "") {
-        return this.countries.filter((x: CountryModel) => {
-          return (
-            x.region.toLowerCase().includes(this.region.toLowerCase()) &&
-            x.name.toLowerCase().includes(this.search.toLowerCase())
-          )
-        });
-      }
+        if (this.region === "Choose a region" && this.search != "") {
+          return countries.filter((x: CountryModel) => {
+            return x.name.toLowerCase().includes(this.search.toLowerCase());
+          });
+        }
 
-      if (this.region === "Choose a region" && this.search === "") {
-        return this.countries.filter((x: CountryModel) => {
-          return (
-            x.region.toLowerCase().includes("") ||
-            x.name.toLowerCase().includes(this.search.toLowerCase())
-          )
-        });
+        if (this.region != "Choose a region" || this.search != "") {
+          return countries.filter((x: CountryModel) => {
+            return (
+              x.region.toLowerCase().includes(this.region.toLowerCase()) &&
+              x.name.toLowerCase().includes(this.search.toLowerCase())
+            )
+          });
+        }
+
+        if (this.region === "Choose a region" && this.search === "") {
+          return countries.filter((x: CountryModel) => {
+            return (
+              x.region.toLowerCase().includes("") ||
+              x.name.toLowerCase().includes(this.search.toLowerCase())
+            )
+          });
+        }
       }
     },
   },
