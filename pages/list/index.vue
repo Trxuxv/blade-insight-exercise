@@ -69,7 +69,7 @@
                 {{ item.subregion }}
               </td>
               <td class="py-4 px-6">
-                {{ item.capital }}
+                {{ item.capital ? item.capital : "---" }}
               </td>
               <td class="py-4 px-6">
                 {{ item.population }}

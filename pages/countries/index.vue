@@ -74,9 +74,7 @@
               class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{ item.region
               }}</span>
             <span
-              class="inline-block bg-yellow-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{
-                  item.capital
-              }}</span>
+              class="inline-block bg-yellow-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{item.capital}}</span>
           </div>
         </div>
       </div>
