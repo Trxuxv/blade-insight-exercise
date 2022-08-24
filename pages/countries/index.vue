@@ -4,7 +4,7 @@
     <div class="w-5/6 mx-auto h-16 py-3 px-10">
       <form class="flex items-center w-3/6">
         <select v-model="region" id="countries"
-          class="mr-3 bg-gray-50 text-left py-2.5 border pr-6 border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500">
+          class="mr-3 bg-gray-50 text-left py-2.5 border pr-6 border-gray-300 text-gray-400 text-sm rounded-lg focus:outline-none block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
           <option><span> Choose a region </span></option>
           <option value="africa">Africa</option>
           <option value="antarctic Ocean">Antarctic Ocean</option>
@@ -26,7 +26,7 @@
             </svg>
           </div>
           <input type="text" id="simple-search" v-model="search"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500"
+            class="bg-gray-50 border focus:outline-none border-gray-300 text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
             placeholder="Search" />
         </div>
       </form>
@@ -57,7 +57,7 @@
             <p class="text-gray-700 text-base">
               <NuxtLink :to="`countries/${item.region.toLowerCase()}/${item.name.toLowerCase()}`">
                 <button type="button"
-                  class="text-white mt-6 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
+                  class="text-white mt-6 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-red-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
                   More details
                   <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">

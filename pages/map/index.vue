@@ -3,7 +3,7 @@
         <div class="w-full h-full mx-auto map">
             <div class="w-full pt-3 pl-2">
                 <button type="button" href="/" @click="goHome"
-                    class="text-white flex justify-center items-center bg-red-400 hover:bg-red-500 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                    class="text-white flex justify-center items-center bg-red-600 hover:bg-red-700 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6 mr-2">
                         <path stroke-linecap="round" stroke-linejoin="round"

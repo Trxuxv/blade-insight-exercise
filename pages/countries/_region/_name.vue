@@ -72,7 +72,7 @@
           class="mt-14 rounded-lg w-full text-center h-1/5 bg-white grid grid-cols-5 gap-2 p-3">
           <b class="text-base">Borders: </b>
           <div
-            class="h-8 flex items-center cursor-pointer text-gray-100 font-bold justify-center text-sm rounded-full text-center bg-yellow-600"
+            class="h-8 flex items-center cursor-pointer text-gray-100 font-bold justify-center text-sm rounded-full text-center bg-red-600"
             v-for="item in country?.borders" :key="item">
             {{ item }}
           </div>
