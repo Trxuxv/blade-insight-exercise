@@ -8,7 +8,7 @@
             <th>
               <select v-model="region" id="countries"
                 class="bg-gray-50 text-left py-2.5 border pr-6 border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected=""><span> Choose a region </span></option>
+                <option><span> Choose a region </span></option>
                 <option value="africa">Africa</option>
                 <option value="antarctic Ocean">Antarctic Ocean</option>
                 <option value="antarctic">Antarctic</option>
@@ -36,7 +36,7 @@
                   </div>
                   <input v-model="search" type="text" id="simple-search"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search" required="" />
+                    placeholder="Search" />
                 </div>
               </form>
             </th>
@@ -54,7 +54,7 @@
               <th scope="col" class="py-3 px-6 font-bold text-center"></th>
             </tr>
           </thead>
-          <tbody v-for="item in filteredCountries">
+          <tbody v-for="item in filteredCountries" :key="item.name">
             <tr v-show="!loading" class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 text-center">
               <th scope="row" class="py-4 px-4 bg-gray-50 text-center rounded-lg">
                 <img :src="item.flag" class="w-12 mx-auto rounded-sm" alt="" />
@@ -107,8 +107,9 @@
   </div>
 </template>
 <script lang="ts">
+import { CountryModel } from "../countries/model/country.model";
+import Nav from "./../../components/Nav.vue";
 import Vue from "vue";
-import Nav from "~/components/Nav.vue";
 
 export default Vue.extend({
   name: "List",
@@ -117,14 +118,14 @@ export default Vue.extend({
       region: "Choose a region",
       loading: true,
       search: "",
-      countries: [],
+      countries: [] as CountryModel[],
     };
   },
   created() {
     fetch("https://restcountries.com/v2/all")
       .then((response) => response.json())
       .then((data) => {
-        this.countries = data;
+        this.countries = data as CountryModel[];
         this.loading = false;
       });
   },
@@ -132,13 +133,13 @@ export default Vue.extend({
   computed: {
     filteredCountries() {
       if (this.region === "Choose a region" && this.search != "") {
-        return this.countries.filter((x: any) => {
+        return this.countries.filter((x: CountryModel) => {
           return x.name.toLowerCase().includes(this.search.toLowerCase());
         });
       }
 
       if (this.region != "Choose a region" || this.search != "") {
-        return this.countries.filter((x: any) => {
+        return this.countries.filter((x: CountryModel) => {
           return (
             x.region.toLowerCase().includes(this.region.toLowerCase()) &&
             x.name.toLowerCase().includes(this.search.toLowerCase())
@@ -147,7 +148,7 @@ export default Vue.extend({
       }
 
       if (this.region === "Choose a region" && this.search === "") {
-        return this.countries.filter((x: any) => {
+        return this.countries.filter((x: CountryModel) => {
           return (
             x.region.toLowerCase().includes("") ||
             x.name.toLowerCase().includes(this.search.toLowerCase())

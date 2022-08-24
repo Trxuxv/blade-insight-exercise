@@ -1,19 +1,11 @@
 <template>
   <div class="w-full h-screen bg-gradient-to-b from-gray-200 to-gray-600">
     <Nav />
-
-    <div>
-      <ul v-for="mountain in mountains" :key="mountain.id">
-        <NuxtLink :to="`${mountain.continent.toLowerCase()}/${mountain.slug}`">
-          <li>{{ mountain.title }}</li>
-        </NuxtLink>
-      </ul>
-    </div>
     <div class="w-5/6 mx-auto h-16 py-3 px-10">
       <form class="flex items-center w-3/6">
         <select v-model="region" id="countries"
           class="mr-3 bg-gray-50 text-left py-2.5 border pr-6 border-gray-300 text-gray-400 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500">
-          <option selected=""><span> Choose a region </span></option>
+          <option><span> Choose a region </span></option>
           <option value="africa">Africa</option>
           <option value="antarctic Ocean">Antarctic Ocean</option>
           <option value="antarctic">Antarctic</option>
@@ -35,7 +27,7 @@
           </div>
           <input type="text" id="simple-search" v-model="search"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500"
-            placeholder="Search" required="" />
+            placeholder="Search" />
         </div>
       </form>
     </div>
@@ -58,7 +50,7 @@
 
       <div v-show="!loading"
         class="grid grid-cols-5 h-95 w-5/6 m-auto overflow-y-scroll p-2 rounded-lg tab-countries px-6 cursor-pointer">
-        <div class="max-w-sm rounded shadow-lg m-5" v-for="item in filteredCountries">
+        <div class="max-w-sm rounded shadow-lg m-5" v-for="item in filteredCountries" :key="item.name">
           <img class="w-full h-2/5" :src="item.flag" alt="Sunset in the mountains" />
           <div class="px-6 py-4">
             <div class="font-bold bg-red-500text-xl mb-2">{{ item.name }}</div>
@@ -93,6 +85,7 @@
 </template>
 
 <script lang="ts">
+import { CountryModel } from "./model/country.model";
 import Vue from "vue";
 
 export default Vue.extend({
@@ -102,7 +95,7 @@ export default Vue.extend({
       region: "Choose a region",
       loading: true,
       search: "",
-      countries: [],
+      countries: [] as CountryModel[],
     };
   },
 
@@ -110,32 +103,32 @@ export default Vue.extend({
     fetch("https://restcountries.com/v2/all")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data), (this.countries = data), (this.loading = false);
+        (this.countries = data), (this.loading = false);
       });
   },
   computed: {
     filteredCountries() {
       if (this.region === "Choose a region" && this.search != "") {
-        return this.countries.filter((x: any) => {
+        return this.countries.filter((x: CountryModel) => {
           return x.name.toLowerCase().includes(this.search.toLowerCase());
         });
       }
 
       if (this.region != "Choose a region" || this.search != "") {
-        return this.countries.filter((x: any) => {
+        return this.countries.filter((x: CountryModel) => {
           return (
             x.region.toLowerCase().includes(this.region.toLowerCase()) &&
             x.name.toLowerCase().includes(this.search.toLowerCase())
-          );
+          )
         });
       }
 
       if (this.region === "Choose a region" && this.search === "") {
-        return this.countries.filter((x: any) => {
+        return this.countries.filter((x: CountryModel) => {
           return (
             x.region.toLowerCase().includes("") ||
             x.name.toLowerCase().includes(this.search.toLowerCase())
-          );
+          )
         });
       }
     },
