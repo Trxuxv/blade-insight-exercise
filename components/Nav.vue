@@ -8,6 +8,7 @@
     <div class="w-3/6 h-full flex justify-center items-center">
       <nuxt-link class="w-1/6 cursor-pointer" to="/">Home</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/list">List</nuxt-link>
+           <nuxt-link class="w-1/6 cursor-pointer" to="/map">Map</nuxt-link>
       <nuxt-link class="w-1/6 cursor-pointer" to="/about">About</nuxt-link>
       <a href="https://debora.netlify.app/" class="w-1/6 cursor-pointer" target="_blank">Débora L. F. Maciel</a>
       <!-- <nuxt-link class="w-1/6 cursor-pointer" to="/dev">
