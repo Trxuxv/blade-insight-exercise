@@ -1,4 +1,4 @@
-# blade-insight-exercise
+# BladeInsight - Exercise
 
 ![image](https://user-images.githubusercontent.com/79454375/186249890-fb3cc159-ebac-4191-b12f-9d69d6ae27c1.png)
 
