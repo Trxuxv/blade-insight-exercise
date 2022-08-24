@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-screen bg-gradient-to-b from-gray-200 to-gray-600">
+  <div class="w-full h-screen bg-gradient-to-b from-gray-200 to-gray-600 default">
     <Nav />
     <div class="w-5/6 mx-auto h-16 py-3 px-10">
       <form class="flex items-center w-3/6">
@@ -51,7 +51,7 @@
       <div v-show="!loading"
         class="grid grid-cols-5 h-95 w-5/6 m-auto overflow-y-scroll p-2 rounded-lg tab-countries px-6 cursor-pointer">
         <div class="max-w-sm rounded shadow-lg m-5" v-for="item in filteredCountries" :key="item.name">
-          <img class="w-full h-2/5" :src="item.flag" alt="Sunset in the mountains" />
+          <img class="w-full rounded-lg h-2/5 image-flag relative" :src="item.flag" alt="Sunset in the mountains" />
           <div class="px-6 py-4">
             <div class="font-bold bg-red-500text-xl mb-2">{{ item.name }}</div>
             <p class="text-gray-700 text-base">
@@ -74,7 +74,10 @@
               class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{ item.region
               }}</span>
             <span
-              class="inline-block bg-yellow-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{item.capital ? item.capital : "No information"}}</span>
+              class="inline-block bg-yellow-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{
+                  item.capital
+                    ? item.capital : "No information"
+              }}</span>
           </div>
         </div>
       </div>
@@ -189,5 +192,11 @@ export default Vue.extend({
 
 #Polar {
   background: #a1c79a;
+}
+
+.image-flag:hover {
+  z-index: 99;
+  border-radius: 10px;
+  transform: scale(1.3);
 }
 </style>
